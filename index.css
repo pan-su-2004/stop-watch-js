@@ -1,0 +1,143 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Inter:wght@500&family=Italianno&family=Poppins:wght@400;600;900&display=swap");
+:root {
+  --bg--color: #141413;
+  --card--color: #141413;
+  --primary--color: #fff500;
+  --secondary-color: #ff845d;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  /* font-family: "Poppins", sans-serif; */
+}
+body {
+  background-color: var(--bg--color);
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.clock-container {
+  height: 100%;
+  transform: scale(0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card--color);
+  max-width: 450px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75),
+    10px 10px 70px rgba(0, 0, 0, 0.25), 5px 5px 10px rgba(0, 0, 0, 0.5),
+    5px 5px 20px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+.clock {
+  color: white;
+  margin-bottom: 30px;
+  width: 200px;
+  height: 200px;
+  border: solid 2px var(--primary--color);
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.3rem;
+  box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+    5px 5px 10px rgba(0, 0, 0, 0.5), 5px 5px 20px rgba(0, 0, 0, 0.2),
+    -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+.clock-con {
+  position: relative;
+}
+.millisecond {
+  position: absolute;
+  font-size: 0.9rem;
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 50px;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+    5px 5px 10px rgba(0, 0, 0, 0.5), 5px 5px 20px rgba(0, 0, 0, 0.2),
+    -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+.title {
+  color: white;
+  margin-bottom: 30px;
+}
+h1::before {
+  content: "Measure";
+  color: var(--primary--color);
+  /* font-family: "Honk", system-ui;
+  font-size: 2.5rem;
+  margin-bottom: 0; */
+}
+h1 {
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  font-size: 1.9rem;
+}
+h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 15px;
+  font-style: italic;
+  font-family: "Honk", system-ui;
+  /* text-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+    5px 5px 10px rgba(0, 0, 0, 0.5), 5px 5px 20px rgba(0, 0, 0, 0.2),
+    -5px -5px 15px rgba(0, 0, 0, 0.75); */
+}
+p {
+  font-weight: 100;
+}
+.time {
+  font-style: normal;
+  font-weight: lighter;
+  font-style: italic;
+}
+.title .underline {
+  position: relative; /* Set position to relative */
+  font-weight: normal;
+}
+
+.title .underline::before,
+.title .underline::after {
+  content: ""; /* Add content */
+  position: absolute; /* Set position to absolute */
+  bottom: -2px; /* Adjust the position vertically */
+  width: 50%; /* Set the width of the underline */
+  height: 1px; /* Set the height of the underline */
+  border-bottom: 2px solid var(--secondary-color); /* Set the color of the underline */
+}
+
+.title .underline::before {
+  left: 0; /* Position the underline to the left */
+}
+
+.title .underline::after {
+  right: 0; /* Position the underline to the right */
+}
+.buttons {
+  display: flex;
+  width: 350px;
+  gap: 15px;
+  justify-content: space-between;
+}
+.buttons button {
+  border: 1px solid var(--primary--color);
+  /* background-color: var(--primary--color); */
+  border-radius: 50px;
+  width: 100%;
+  box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+    5px 5px 10px rgba(0, 0, 0, 0.5), 5px 5px 20px rgba(0, 0, 0, 0.2),
+    -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
